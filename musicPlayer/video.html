@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            height: auto;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <video controls width="250">
+        <source id="source" src="mp4/video0.mp4" type="video/mp4">
+    </video>
+    </video>
+    <script>
+        //获取前面的存储的musicId值
+        var storage = window.sessionStorage;
+        var cur_str = storage.musicId;
+        document.getElementById('source').src = "mp4/video" + cur_str.toString() + ".mp4";
+    </script>
+</body>
+
+</html>
